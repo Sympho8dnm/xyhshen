@@ -190,7 +190,7 @@
 		<div id="login" class="logintopic">登录</div>
 		</div>
 		<div class="starServ" style="margin-top:100px">
-			<p><center style="color:white;">注：需要有摄像头才能正常使用！请使用电脑版chrome浏览器测试，其它浏览器暂不打算兼容！</center></p>
+			<p><center style="color:white;">注：需要有摄像头才能正常使用！请使用电脑版最新的chrome浏览器测试，其它浏览器暂不打算兼容！</center></p>
 			<div id="voipButton" class="topic">一对一视频</div>
 			<div id="videoLiveButton" class="topic">互动直播</div>
 			<div id="videoMeetingButton" class="topic">多人会议</div>			
@@ -198,12 +198,12 @@
 			
 			<center>安卓和iOS程序也可以和这个页面互通：
 			<a id = "continue" onMouseOut="hideAndroidQr()" onmouseover="showAndroidQr()" class="a_pay">下载安卓版</a>
-			<a id = "continue" onMouseOut="hideiOSQr()" onmouseover="showiOSQr()" class="a_pay">下载iOS版</a>
+			<!--<a id = "continue" onMouseOut="hideiOSQr()" onmouseover="showiOSQr()" class="a_pay">下载iOS版</a>-->
 			&nbsp;&nbsp;
 			<a href='https://www.starrtc.com/demo/im/' target="_blank">匿名公共聊天室</a>
 			</center>
 			
-			<p><center style="color:white;">Copyright &copy; <a href='https://docs.starrtc.com/download/'>starRTC.com</a>&nbsp;&nbsp;&nbsp;v1.0.3</center></p>
+			<p><center style="color:white;">Copyright &copy; <a href='https://docs.starrtc.com/en/download/'>starRTC.com</a>&nbsp;&nbsp;&nbsp;v1.0.3</center></p>
 			
 			<div id="android_app" style="display:none;height:200px;back-ground:#f00;position:absolute;"><img src="android.png"/></div>
 			<div id="ios_app" style="display:none;height:200px;back-ground:#f00;position:absolute;"><img src="ios.png"/></div>
@@ -212,6 +212,17 @@
 	<div id="voipTab" class="tab" style="display:none">
 		<div id="voipResponseDlg" title="收到视频聊天申请">
 		  <p class="validateTips">收到来自用户：<span id="callerId"></span>的视频聊天申请.</p>
+		</div>
+		<div id="voipConnectDlg" title="正在呼叫用户">
+		    <div class="validateTips">
+				<div class="spinner" style="width:100px;margin-top:10px;">
+					<div class="rect1" style="margin-left:5px;"></div>
+					<div class="rect2" style="margin-left:5px;"></div>
+					<div class="rect3" style="margin-left:5px;"></div>
+					<div class="rect4" style="margin-left:5px;"></div>
+					<div class="rect5" style="margin-left:5px;"></div>
+				</div>
+			</div>
 		</div>
 		<div class="left">
 			<div class="backButton" >返回</div>
@@ -259,11 +270,9 @@
 			<input type="checkbox" id="liveTypecheck" style="display:none"><label for="liveTypecheck" style="display:none">公开</label>
 		  </div>
 		</div>
-		
 		<div id="videoLiveDelDlg" title="离开直播">
 		  <p class="validateTips">确定要离开直播间吗？</p>
 		</div>
-		
 		<div id="videoLiveCanvasDlg" title="画板">
 			<div style="width:100%;height:100%;position:relative;">
 				<div id="videoLiveCanvas" style="width:100%;height:100%;z-index=1;position:absolute;top:0px;left:0px;">
@@ -272,7 +281,9 @@
 				</div>
 			</div>
 		</div>
-	
+		<div id="videoLiveApplyDlg" title="申请直播连麦">
+		  <p class="validateTips">申请直播连麦吗？</p>
+		</div>
 		<div id="videoLiveManageDlg" title="用户管理">
 		  <p class="validateTips">收到来自用户：<span id="applyTargetId"></span>的连麦申请.</p>
 		</div>
