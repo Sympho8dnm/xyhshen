@@ -207,8 +207,14 @@
 		</div>
 	</div>
 	<div id="voipTab" class="tab" style="display:none">
-		<div id="voipResponseDlg" title="收到视频聊天申请">
-			<p class="validateTips">收到来自用户：<span id="callerId"></span>的视频聊天申请.</p>
+		<div id="voipCallDlg" title="发送1对1聊天申请">
+			<p class="validateTips">向用户：<span id="calleeId"></span>发起1对1聊天申请.</p>
+			<div style="margin-top:10px">
+				<input type="checkbox" id="voipTypeAudioOnly"><label for="voipTypeAudioOnly">仅音频</label>
+			</div>
+		</div>
+		<div id="voipResponseDlg" title="收到1对1聊天申请">
+			<p class="validateTips">收到来自用户：<span id="callerId"></span>的<span id="callerType">视频</span>聊天申请.</p>
 		</div>
 		<div id="voipConnectDlg" title="正在呼叫用户">
 			<div class="validateTips">
@@ -637,7 +643,7 @@
 								</svg></span>
 						</div>
 						<div id="superTalkUserName0" class="title"></div>
-						<audio id="superTalkAudioUser0" autoplay muted style="width:100%;height:100%" />
+						<audio id="superTalkAudioUser0" autoplay style="width:100%;height:100%" />
 					</div>
 					<div id="superTalkUser1" class="" style="width:25%;height:50%;float:left;display:none">
 						<div style="display: flex;align-items: center;justify-content: center;">
@@ -665,7 +671,7 @@
 								</svg></span>
 						</div>
 						<div id="superTalkUserName1" class="title"></div>
-						<audio id="superTalkAudioUser1" autoplay muted style="width:100%;height:100%" />
+						<audio id="superTalkAudioUser1" autoplay style="width:100%;height:100%" />
 					</div>
 					<div id="superTalkUser2" class="" style="width:25%;height:50%;float:left;display:none">
 						<div style="display: flex;align-items: center;justify-content: center;">
@@ -693,7 +699,7 @@
 								</svg></span>
 						</div>
 						<div id="superTalkUserName2" class="title"></div>
-						<audio id="superTalkAudioUser2" autoplay muted style="width:100%;height:100%" />
+						<audio id="superTalkAudioUser2" autoplay style="width:100%;height:100%" />
 					</div>
 					<div id="superTalkUser3" class="" style="width:25%;height:50%;float:left;display:none">
 						<div style="display: flex;align-items: center;justify-content: center;">
@@ -721,7 +727,7 @@
 								</svg></span>
 						</div>
 						<div id="superTalkUserName3" class="title"></div>
-						<audio id="superTalkAudioUser3" autoplay muted style="width:100%;height:100%" />
+						<audio id="superTalkAudioUser3" autoplay style="width:100%;height:100%" />
 					</div>
 					<div id="superTalkUser4" class="" style="width:25%;height:50%;float:left;display:none">
 						<div style="display: flex;align-items: center;justify-content: center;">
@@ -749,7 +755,7 @@
 								</svg></span>
 						</div>
 						<div id="superTalkUserName4" class="title"></div>
-						<audio id="superTalkAudioUser4" autoplay muted style="width:100%;height:100%" />
+						<audio id="superTalkAudioUser4" autoplay style="width:100%;height:100%" />
 					</div>
 					<div id="superTalkUser5" class="" style="width:25%;height:50%;float:left;display:none">
 						<div style="display: flex;align-items: center;justify-content: center;">
@@ -777,7 +783,7 @@
 								</svg></span>
 						</div>
 						<div id="superTalkUserName5" class="title"></div>
-						<audio id="superTalkAudioUser5" autoplay muted style="width:100%;height:100%" />
+						<audio id="superTalkAudioUser5" autoplay style="width:100%;height:100%" />
 					</div>
 					<div id="superTalkUser6" class="" style="width:25%;height:50%;float:left;display:none">
 						<div style="display: flex;align-items: center;justify-content: center;">
@@ -805,7 +811,7 @@
 								</svg></span>
 						</div>
 						<div id="superTalkUserName6" class="title"></div>
-						<audio id="superTalkAudioUser6" autoplay muted style="width:100%;height:100%" />
+						<audio id="superTalkAudioUser6" autoplay style="width:100%;height:100%" />
 					</div>
 				</div>
 				<div id="superTalkMsgWindow" style="width:15%;height:100%;float:right;position:relative;">
